@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+	flex-direction: column;
+	background-color: aliceblue;
+}
+
+#pending-cells {
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+.err_1 {background-color: #FFBFBF !important;}
+.err_2 {background-color: #FF7F7F !important;}
+.err_3 {background-color: #FF7F7F !important;}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 5px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+	height: 90vh; /* Set the height to 90% of the viewport height */
+	width: 90vh;  /* Maintain a square shape for the board */
+	max-width: 100%; /* Prevent it from overflowing the width */
+}
+
+.timer {
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 30px;
+    background-color: #f5f5f5;
+}
+
+.cell.readonly {
+    font-weight: bold;
+    color: black;
+}
+
+.cell.editable {
+    color: blue;
+}
+
+.cell.editable input {
+    width: 95%;
+    height: 95%;
+    font-size: 48px;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: cornflowerblue;
+	background-color: ghostwhite;
+}
+
+.cell.readonly input {
+    width: 95%;
+    height: 95%;
+    font-size: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: black;
+	background-color: floralwhite;
+}
+
+.col2, .col5, .col8{
+    border-right: 15px solid #333; 
+}
+.row2, .row5, .row8{
+    border-bottom: 15px solid #333; 
+}
+
+.varios{
+	font-size: 30px !important;	
+}
+
+input.tope{
+	font-size: 25px !important;
+}
