@@ -189,13 +189,15 @@ function checkInput(row, col, value) {
 	
 	// comprobar los errores que hay respecto a la solución del sudoku
 	const sudoku_dict = all_sudokus[sudoku_index];
-	solucion_sudoku = sudoku_dict["solucion"];	
-	
-	for (x=0; x<9; x++) {
-		for (y=0; y<9; y++) {
-			if (valores_tablero[x][y]>0) {
-				if (valores_tablero[x][y] != solucion_sudoku[x][y])
-					differentNumbers++;
+	if ("solucion" in sudoku_dict) {
+		solucion_sudoku = sudoku_dict["solucion"];	
+		
+		for (x=0; x<9; x++) {
+			for (y=0; y<9; y++) {
+				if (valores_tablero[x][y]>0) {
+					if (valores_tablero[x][y] != solucion_sudoku[x][y])
+						differentNumbers++;
+				}
 			}
 		}
 	}
